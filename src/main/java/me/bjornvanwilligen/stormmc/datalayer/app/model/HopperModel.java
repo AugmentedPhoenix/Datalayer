@@ -1,29 +1,26 @@
 package me.bjornvanwilligen.stormmc.datalayer.app.model;
 
-import me.bjornvanwilligen.stormmc.datalayer.api.annotations.Default;
 import me.bjornvanwilligen.stormmc.datalayer.api.annotations.NotNull;
 import me.bjornvanwilligen.stormmc.datalayer.api.annotations.PrimaryKey;
+import me.bjornvanwilligen.stormmc.datalayer.api.annotations.Serialize;
 import me.bjornvanwilligen.stormmc.datalayer.api.model.Model;
 
 import java.util.UUID;
 
-public class PlayerModel implements Model {
-
+public class HopperModel implements Model {
     @PrimaryKey
     @NotNull
     private UUID ID;
     @NotNull
-    @Default(defaultValue = 0)
-    private int kills;
+    private int X;
     @NotNull
-    @Default(defaultValue = 0)
-    private int deaths;
+    private int Y;
     @NotNull
-    @Default(defaultValue = 0)
-    private int sem;
-    /*
-    @Serialize(serializer = ItemStackSerializer.class)
+    private int Z;
     @NotNull
-    private ArrayList<ItemStack> content;
-     */
+    private UUID worldID;
+    @NotNull
+    private UUID ownerID;
+    @NotNull
+    private UUID baseTotemID;
 }

@@ -6,8 +6,8 @@ import java.util.UUID;
 
 public enum TypeEnum {
     STRING(String.class, "LONGTEXT"),
-    UUID(java.util.UUID.class, "STRING(128)"),
-    INT(int.class, "NUMBER(11)"),
+    UUID(java.util.UUID.class, "VARCHAR(128)"),
+    INT(int.class, "INT"),
     HOOK(null, null);
 
     private final Class<?> clazz;
